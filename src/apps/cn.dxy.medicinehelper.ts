@@ -29,6 +29,8 @@ export default defineGkdApp({
       key: 2,
       name: '功能类-自动领取每日叮当奖励',
       desc: '点击带有叮当+x的去学习并返回',
+      actionMaximum: 1,
+      resetMatch: 'app', // 一天只有一次机会，还有防止key1反复触发
       rules: [
         {
           key: 0,
@@ -44,6 +46,22 @@ export default defineGkdApp({
           matches: 'View[childCount=5][clickable=false][visibleToUser=true]',
           action: 'back',
           snapshotUrls: 'https://i.gkd.li/i/25292779',
+        },
+        {
+          key: 1,
+          fastQuery: true,
+          activityIds: '.article.qa.QASheetActivity',
+          matches:
+            '@[text="去学习"][visibleToUser=true] - [text=" 人学习过"] - * < View <<n ListView <<n FrameLayout - [vid="toolbar"]', // 叮当渲染进去了，需要严格匹配判断
+          snapshotUrls: 'https://i.gkd.li/i/25604101',
+        },
+        {
+          preKeys: [1],
+          fastQuery: true,
+          activityIds: 'cn.dxy.drugscomm.web.WebActivity',
+          matches: '[vid="closeIcon"]',
+          action: 'back',
+          snapshotUrls: 'https://i.gkd.li/i/25604253',
         },
       ],
     },
