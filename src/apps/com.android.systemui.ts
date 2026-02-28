@@ -124,7 +124,7 @@ export default defineGkdApp({
     },
     {
       key: 5,
-      name: '功能类-自动允许无线调试',
+      name: '功能类-自动允许无线调试(真我📱)',
       desc: '点击 ①✅始终允许 ②允许',
       fastQuery: true,
       rules: [
