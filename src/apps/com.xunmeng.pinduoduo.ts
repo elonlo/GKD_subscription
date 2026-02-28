@@ -374,5 +374,51 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 22,
+      name: '功能类-自动处方流程',
+      desc: '自动点击处方流程到支付',
+      fastQuery: true,
+      activityIds: '.activity.NewPageActivity',
+      rules: [
+        {
+          key: 0,
+          name: '点击已确诊的疾病', // 否则无法继续
+          actionMaximum: 1,
+          activityIds: '.activity.NewPageActivity',
+          matches: '[text="选择已确诊的疾病"] + View > * > TextView[index=0]',
+          snapshotUrls: 'https://i.gkd.li/i/25639924',
+          excludeMatches: 'RelativeLayout > [text="请选择已确诊的疾病"]', // 排除匹配
+          excludeSnapshotUrls: 'https://i.gkd.li/i/25639813', // 无法点击继续
+          exampleUrls: 'https://e.gkd.li/f92b5d13-da8a-4eb2-b981-66bdc12b9c1c',
+        },
+        {
+          key: 1,
+          name: '点击提交并开药',
+          preKeys: [0],
+          matches:
+            '@[text="提交并开药"][clickable=true][visibleToUser=true] -n [index=0] < [id="main"] < [text^="购买处方药"] <<n [id="android:id/content"]',
+          snapshotUrls: 'https://i.gkd.li/i/25639924',
+        },
+        {
+          key: 2,
+          name: '点击无需补充，立即开方',
+          preKeys: [1],
+          matchDelay: 2600, // 等待界面稳定后再匹配
+          matches:
+            '@[clickable=true] >2 [text="无需补充，立即开方"][visibleToUser=true]',
+          snapshotUrls: 'https://i.gkd.li/i/25639993',
+          exampleUrls: 'https://e.gkd.li/5a9c65aa-8b3f-4076-a7d1-20b537526f5b',
+        },
+        {
+          name: '点击立即支付',
+          preKeys: [2],
+          matchDelay: 2600, // 等待处方下来
+          matches: '@[clickable=true] >2 [text="立即支付"][visibleToUser=true]',
+          snapshotUrls: 'https://i.gkd.li/i/25640017',
+          exampleUrls: 'https://e.gkd.li/31396caf-8a11-484e-9ece-c273a05939ab',
+        },
+      ],
+    },
   ],
 });
