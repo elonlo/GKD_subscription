@@ -118,6 +118,7 @@ export default defineGkdApp({
     {
       key: 1,
       name: '功能类-电脑微信快捷自动登录',
+      desc: '点击[登录]',
       fastQuery: true,
       matchTime: 10000,
       actionMaximum: 1,
@@ -138,12 +139,7 @@ export default defineGkdApp({
             'https://i.gkd.li/i/25315046', // zh_TW
             'https://i.gkd.li/i/25815630', // Linux_zh_CN
           ],
-          exampleUrls: [
-            'https://e.gkd.li/4434dd75-1c9c-4c4a-a6fb-47490b751ec4', // zh_CN
-            'https://e.gkd.li/07d6de6e-3734-42e4-8c33-6a176bc497dd', // En_US
-            'https://e.gkd.li/1900ff84-0619-42df-bdaa-2e552adfce38', // zh_TW
-            'https://e.gkd.li/ceb92d28-4964-4497-8e5e-271d84cac685', // Linux_zh_CN
-          ],
+          exampleUrls: 'https://e.gkd.li/4434dd75-1c9c-4c4a-a6fb-47490b751ec4',
         },
       ],
     },
