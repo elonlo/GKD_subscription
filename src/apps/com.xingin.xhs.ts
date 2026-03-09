@@ -241,5 +241,143 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 10,
+      name: '功能类-自动倍速⏩x0.75⚠️五选一',
+      desc: '适合观看细节场景需求',
+      fastQuery: true,
+      actionMaximum: 1,
+      actionCd: 1000, // 界面稳定后执行
+      activityIds: 'com.xingin.matrix.detail.activity.DetailFeedActivity',
+      rules: [
+        {
+          key: 0,
+          matches: '[vid="layer_player"][visibleToUser=true]',
+          action: 'longClick',
+          snapshotUrls: 'https://i.gkd.li/i/25854264',
+          exampleUrls: 'https://e.gkd.li/3d621ea3-af7b-49cf-95bb-4fd54fcc5b54',
+        },
+        {
+          preKeys: [0],
+          matches:
+            '[text="倍速"] + [vid="video_speed_setting_ll"] > [text="0.75"]',
+          snapshotUrls: 'https://i.gkd.li/i/25854394',
+          exampleUrls: [
+            'https://e.gkd.li/3d621ea3-af7b-49cf-95bb-4fd54fcc5b54', // 倍速弹窗
+            'https://e.gkd.li/65ae2f11-3412-4f0a-a255-ffa5916bd9d9', // 成功点击后提示
+          ],
+        },
+      ],
+    },
+    {
+      key: 11,
+      name: '功能类-自动倍速⏩x1.25⚠️五选一',
+      desc: '适合日常效率需求',
+      fastQuery: true,
+      actionMaximum: 1,
+      actionCd: 1000, // 界面稳定后执行
+      activityIds: 'com.xingin.matrix.detail.activity.DetailFeedActivity',
+      rules: [
+        {
+          key: 0,
+          matches: '[vid="layer_player"][visibleToUser=true]',
+          action: 'longClick',
+          snapshotUrls: 'https://i.gkd.li/i/25854264',
+          exampleUrls: 'https://e.gkd.li/3d621ea3-af7b-49cf-95bb-4fd54fcc5b54',
+        },
+        {
+          preKeys: [0],
+          matches:
+            '[text="倍速"] + [vid="video_speed_setting_ll"] > [text="1.25"]',
+          snapshotUrls: 'https://i.gkd.li/i/25854394',
+          exampleUrls: [
+            'https://e.gkd.li/3d621ea3-af7b-49cf-95bb-4fd54fcc5b54', // 倍速弹窗
+            'https://e.gkd.li/65ae2f11-3412-4f0a-a255-ffa5916bd9d9', // 成功点击后提示
+          ],
+        },
+      ],
+    },
+    {
+      key: 12,
+      name: '功能类-自动倍速⏩x1.5⚠️五选一',
+      fastQuery: true,
+      actionMaximum: 1,
+      actionCd: 1000, // 界面稳定后执行
+      activityIds: 'com.xingin.matrix.detail.activity.DetailFeedActivity',
+      rules: [
+        {
+          key: 0,
+          matches: '[vid="layer_player"][visibleToUser=true]',
+          action: 'longClick',
+          snapshotUrls: 'https://i.gkd.li/i/25854264',
+          exampleUrls: 'https://e.gkd.li/3d621ea3-af7b-49cf-95bb-4fd54fcc5b54',
+        },
+        {
+          preKeys: [0],
+          matches:
+            '[text="倍速"] + [vid="video_speed_setting_ll"] > [text="1.5"]',
+          snapshotUrls: 'https://i.gkd.li/i/25854394',
+          exampleUrls: [
+            'https://e.gkd.li/3d621ea3-af7b-49cf-95bb-4fd54fcc5b54', // 倍速弹窗
+            'https://e.gkd.li/65ae2f11-3412-4f0a-a255-ffa5916bd9d9', // 成功点击后提示
+          ],
+        },
+      ],
+    },
+    {
+      key: 13,
+      name: '功能类-自动倍速⏩x2.0⚠️五选一',
+      fastQuery: true,
+      actionMaximum: 1,
+      actionCd: 1000, // 界面稳定后执行
+      activityIds: 'com.xingin.matrix.detail.activity.DetailFeedActivity',
+      rules: [
+        {
+          key: 0,
+          matches: '[vid="layer_player"][visibleToUser=true]',
+          action: 'longClick',
+          snapshotUrls: 'https://i.gkd.li/i/25854264',
+          exampleUrls: 'https://e.gkd.li/3d621ea3-af7b-49cf-95bb-4fd54fcc5b54',
+        },
+        {
+          preKeys: [0],
+          matches:
+            '[text="倍速"] + [vid="video_speed_setting_ll"] > [text="2.0"]',
+          snapshotUrls: 'https://i.gkd.li/i/25854394',
+          exampleUrls: [
+            'https://e.gkd.li/3d621ea3-af7b-49cf-95bb-4fd54fcc5b54', // 倍速弹窗
+            'https://e.gkd.li/65ae2f11-3412-4f0a-a255-ffa5916bd9d9', // 成功点击后提示
+          ],
+        },
+      ],
+    },
+    {
+      key: 14,
+      name: '功能类-自动倍速⏩x3.0⚠️五选一',
+      desc: 'Max效率需求',
+      fastQuery: true,
+      actionMaximum: 1,
+      actionCd: 1000, // 界面稳定后执行
+      activityIds: 'com.xingin.matrix.detail.activity.DetailFeedActivity',
+      rules: [
+        {
+          key: 0,
+          matches: '[vid="layer_player"][visibleToUser=true]',
+          action: 'longClick',
+          snapshotUrls: 'https://i.gkd.li/i/25854264',
+          exampleUrls: 'https://e.gkd.li/3d621ea3-af7b-49cf-95bb-4fd54fcc5b54',
+        },
+        {
+          preKeys: [0],
+          matches:
+            '[text="倍速"] + [vid="video_speed_setting_ll"] > [text="3.0"]',
+          snapshotUrls: 'https://i.gkd.li/i/25854394',
+          exampleUrls: [
+            'https://e.gkd.li/3d621ea3-af7b-49cf-95bb-4fd54fcc5b54', // 倍速弹窗
+            'https://e.gkd.li/65ae2f11-3412-4f0a-a255-ffa5916bd9d9', // 成功点击后提示
+          ],
+        },
+      ],
+    },
   ],
 });
