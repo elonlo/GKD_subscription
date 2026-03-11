@@ -222,6 +222,15 @@ export default defineGkdApp({
             '[vid="ptgImgBack"][desc="Back"][clickable=true][visibleToUser=true] <<n [vid="webContainer"]',
         },
         {
+          key: 14,
+          fastQuery: true,
+          action: 'clickCenter',
+          activityIds: 'com.ants360.yicamera.activity.SplashActivityChina',
+          matches:
+            '@ImageView[clickable=true][visibleToUser=true][left>=1000][top<=40][width<=160 && height<=140] < RelativeLayout + FrameLayout > WebView[clickable=true][visibleToUser=true]',
+          snapshotUrls: 'https://i.gkd.li/i/25891221',
+        },
+        {
           key: 2,
           fastQuery: true,
           activityIds: [
