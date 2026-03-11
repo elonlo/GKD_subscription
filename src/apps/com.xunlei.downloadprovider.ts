@@ -66,6 +66,15 @@ export default defineGkdApp({
           ],
         },
         {
+          key: 1,
+          fastQuery: true,
+          activityIds: '.frame.MainTabActivity',
+          matches:
+            '[vid="feedback_first_new_dialog_close"][clickable=true][visibleToUser=true]',
+          snapshotUrls: 'https://i.gkd.li/i/25890198',
+        },
+        {
+          key: 2,
           preKeys: [0],
           fastQuery: true,
           activityIds: [

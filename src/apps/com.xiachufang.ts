@@ -31,6 +31,18 @@ export default defineGkdApp({
             'https://i.gkd.li/i/19724417',
           ],
         },
+        {
+          key: 2,
+          fastQuery: true,
+          activityIds: 'com.xiachufang.startpage.ui.StartPageActivity',
+          position: {
+            left: 'width * 0.92',
+            top: 'height * 0.08',
+          },
+          matches:
+            '[vid="ad_container"][visibleToUser=true] > * > [vid="lottieFrameLayout"] > [vid="animation_view"][clickable=true]',
+          snapshotUrls: 'https://i.gkd.li/i/25890206',
+        },
       ],
     },
     {
