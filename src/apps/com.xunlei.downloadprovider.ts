@@ -175,6 +175,14 @@ export default defineGkdApp({
           matches: '@[text*="跳过"] <n * - [text="反馈"]',
           snapshotUrls: 'https://i.gkd.li/i/25843756',
         },
+        {
+          key: 7,
+          fastQuery: true,
+          activityIds: 'com.xunlei.downloadprovider.frame.MainTabActivity',
+          matches:
+            '@ImageView[clickable=true][visibleToUser=true][width<=90 && height<=90][left>=1000][top<=500] +n ImageView[clickable=true][visibleToUser=true][width>=1000 && height>=1500] +n RelativeLayout[clickable=true][visibleToUser=true][width>=1000 && height>=200]',
+          snapshotUrls: 'https://i.gkd.li/i/25901678',
+        },
       ],
     },
     {
