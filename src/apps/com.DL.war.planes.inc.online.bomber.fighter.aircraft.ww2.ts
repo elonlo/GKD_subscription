@@ -8,18 +8,31 @@ export default defineGkdApp({
       key: 1,
       name: '全屏广告',
       fastQuery: true,
-      activityIds: 'com.yandex.mobile.ads.common.AdActivity',
       rules: [
         {
           key: 0,
-          matches:
+          activityIds: 'com.yandex.mobile.ads.common.AdActivity',
+          anyMatches: [
             '@ImageView[index=parent.childCount.minus(1)][clickable=true][visibleToUser=true] < ViewGroup <3 ViewGroup <2 ViewGroup +5 [text="Learn more"]',
-          snapshotUrls: 'https://i.gkd.li/i/25241260',
+            '@ImageView - ViewGroup >2 [text="AD"][visibleToUser=true]',
+            '@[clickable=true] < ViewGroup - * >2 [text="AD · Mintegral"]',
+          ],
+          snapshotUrls: [
+            'https://i.gkd.li/i/25241260',
+            'https://i.gkd.li/i/25241244',
+            'https://i.gkd.li/i/25855014',
+          ],
         },
         {
           key: 1,
-          matches: '@ImageView - ViewGroup >2 [text="AD"][visibleToUser=true]',
-          snapshotUrls: 'https://i.gkd.li/i/25241244',
+          activityIds: 'sg.bigo.ads.api.LandscapeCompanionAdActivity',
+          matches:
+            '[vid="inter_native_ad_view"] < [vid="inter_main"] + [vid="inter_btn_close"] >2 [vid="bigo_ad_btn_close"][clickable=true][visibleToUser=true]',
+          snapshotUrls: [
+            'https://i.gkd.li/i/25854586',
+            'https://i.gkd.li/i/25854585',
+          ],
+          exampleUrls: 'https://e.gkd.li/a492aa5b-9dc7-45c6-afee-23bc2f9a4458',
         },
         {
           key: 2,

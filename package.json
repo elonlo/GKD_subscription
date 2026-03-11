@@ -14,7 +14,10 @@
     "format": "prettier --cache --write ./**/*.{js,cjs,mjs,ts,jsx,tsx,json}",
     "lint": "eslint --cache --fix ./**/*.{js,cjs,mjs,ts,jsx,tsx}",
     "check": "tsc --noEmit && tsx ./scripts/check.ts",
-    "build": "tsc --noEmit && tsx ./scripts/build.ts"
+    "build": "tsc --noEmit && tsx ./scripts/build.ts",
+    "cf:dev": "pnpm dlx wrangler@4.71.0 pages dev dist",
+    "cf:deploy": "sh -c 'test -n \"$CLOUDFLARE_PAGES_PROJECT_NAME\" || { echo \"CLOUDFLARE_PAGES_PROJECT_NAME is required\" >&2; exit 1; }; pnpm dlx wrangler@4.71.0 pages deploy dist --project-name \"$CLOUDFLARE_PAGES_PROJECT_NAME\"'",
+    "cf:build-deploy": "pnpm run build && pnpm run cf:deploy"
   },
   "simple-git-hooks": {
     "pre-commit": "pnpm exec lint-staged",

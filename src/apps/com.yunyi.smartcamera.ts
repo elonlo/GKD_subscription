@@ -8,6 +8,7 @@ export default defineGkdApp({
       key: 1,
       name: '全屏广告',
       desc: '点击关闭',
+      enable: true,
       rules: [
         {
           key: 0,
@@ -48,12 +49,56 @@ export default defineGkdApp({
           matches: '[vid="iv_ad_logo"] - [vid="iv_close"][clickable=true]',
           snapshotUrls: 'https://i.gkd.li/i/25016571',
         },
+        {
+          key: 5,
+          fastQuery: true,
+          action: 'back',
+          activityIds:
+            'com.bytedance.sdk.openadsdk.stub.activity.Stub_Standard_Portrait_Activity',
+          matches: '[text="反馈"][visibleToUser=true]',
+        },
+        {
+          key: 6,
+          fastQuery: true,
+          activityIds: [
+            'com.ants360.yicamera.activity.MainActivity',
+            'com.xiaoyi.yiplayer.ui.PlayerActivity',
+          ],
+          matches:
+            '@[clickable=true][visibleToUser=true][width<=60 && height<=60] <<n [vid="adContainer"]',
+        },
+        {
+          key: 7,
+          fastQuery: true,
+          activityIds: [
+            'com.ants360.yicamera.activity.MainActivity',
+            'com.ants360.yicamera.activity.SplashActivityChina',
+          ],
+          matches: '[vid="btnAntsDialogLeft"][text="仔细思考"][clickable=true]',
+        },
+        {
+          key: 8,
+          fastQuery: true,
+          activityIds: 'com.ants360.yicamera.activity.MainActivity',
+          matches:
+            '@ImageView[clickable=true][visibleToUser=true][width<=60 && height<=60][left>=1000] <<n [vid="native_ad_container" || vid="ad_container"]',
+        },
+        {
+          key: 9,
+          fastQuery: true,
+          activityIds: [
+            'com.ants360.yicamera.activity.MainActivity',
+            'com.xiaoyi.yiplayer.ui.PlayerActivity',
+          ],
+          matches: '@[clickable=true] > [text="不感兴趣"][visibleToUser=true]',
+        },
       ],
     },
     {
       key: 2,
       name: '局部广告',
       desc: '点击关闭',
+      enable: true,
       rules: [
         {
           fastQuery: true,
@@ -67,11 +112,21 @@ export default defineGkdApp({
             'https://i.gkd.li/i/24989255',
           ],
         },
+        {
+          key: 1,
+          fastQuery: true,
+          activityIds: [
+            'com.ants360.yicamera.activity.MainActivity',
+            'com.xiaoyi.yiplayer.ui.PlayerActivity',
+          ],
+          matches: '[vid="tvShow"][text="收起"][clickable=true]',
+        },
       ],
     },
     {
       key: 3,
       name: '权限提示-通知权限',
+      enable: true,
       rules: [
         {
           key: 0,
@@ -80,6 +135,142 @@ export default defineGkdApp({
           matches:
             '[text="开启通知"][childCount=0] +n [text="暂不开启"][clickable=true]',
           snapshotUrls: 'https://i.gkd.li/i/25017451',
+        },
+      ],
+    },
+    {
+      key: 4,
+      name: '开屏广告-启动页广告',
+      desc: '点击跳过或关闭按钮',
+      enable: true,
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
+      priorityTime: 10000,
+      rules: [
+        {
+          key: 0,
+          fastQuery: true,
+          activityIds: [
+            'com.ants360.yicamera.activity.SplashActivityChina',
+            'com.ants360.yicamera.fragment.AdDialogFragment',
+          ],
+          matches: '[vid="ptgSkipLayout"][clickable=true]',
+        },
+        {
+          key: 1,
+          fastQuery: true,
+          activityIds: [
+            'com.ants360.yicamera.activity.SplashActivityChina',
+            'com.ants360.yicamera.fragment.AdDialogFragment',
+          ],
+          matches: '[vid="tv_nm_splash_count_down"][clickable=true]',
+        },
+        {
+          key: 11,
+          fastQuery: true,
+          action: 'clickCenter',
+          activityIds: [
+            'com.ants360.yicamera.activity.SplashActivityChina',
+            'com.ants360.yicamera.fragment.AdDialogFragment',
+          ],
+          matches:
+            '[desc="skip_button"][clickable=true][visibleToUser=true] <<n [id="com.kwad.dy.sdk:id/ksad_splash_root_container"]',
+        },
+        {
+          key: 12,
+          fastQuery: true,
+          action: 'clickCenter',
+          activityIds: 'com.ants360.yicamera.activity.SplashActivityChina',
+          matches:
+            '[vid="ptgImgClose"][desc="Close"][clickable=true][visibleToUser=true] <<n [vid="webContainer"]',
+        },
+        {
+          key: 13,
+          fastQuery: true,
+          action: 'clickCenter',
+          activityIds: 'com.ants360.yicamera.activity.SplashActivityChina',
+          matches:
+            '[vid="ptgImgBack"][desc="Back"][clickable=true][visibleToUser=true] <<n [vid="webContainer"]',
+        },
+        {
+          key: 2,
+          fastQuery: true,
+          activityIds: [
+            'com.ants360.yicamera.activity.MainActivity',
+            'com.ants360.yicamera.activity.SplashActivityChina',
+            'com.ants360.yicamera.fragment.AdDialogFragment',
+          ],
+          matches: '[text^="跳过"][clickable=true][left>=900][top<300]',
+        },
+        {
+          key: 3,
+          fastQuery: true,
+          activityIds: [
+            'com.ants360.yicamera.activity.SplashActivityChina',
+            'com.ants360.yicamera.fragment.AdDialogFragment',
+          ],
+          position: {
+            left: 'width * 0.09',
+            top: 'height * 0.90',
+          },
+          matches: [
+            '[text*="第三方应用" || text*="详情页"][visibleToUser=true]',
+            '[text*="关闭声音"][visibleToUser=true]',
+          ],
+        },
+        {
+          key: 4,
+          fastQuery: true,
+          action: 'clickCenter',
+          activityIds: [
+            'com.ants360.yicamera.activity.MainActivity',
+            'com.ants360.yicamera.activity.SplashActivityChina',
+            'com.ants360.yicamera.fragment.AdDialogFragment',
+          ],
+          matches: '[text="立即进入"][visibleToUser=true]',
+        },
+        {
+          key: 5,
+          fastQuery: true,
+          activityIds: [
+            'com.ants360.yicamera.activity.SplashActivityChina',
+            'com.ants360.yicamera.fragment.AdDialogFragment',
+          ],
+          position: {
+            left: 'width * 0.96',
+            top: 'height * 0.065',
+          },
+          matches: [
+            '[text="立即进入"][visibleToUser=true]',
+            '[text*="落地页" || text*="三方APP"][visibleToUser=true]',
+          ],
+        },
+        {
+          key: 6,
+          fastQuery: true,
+          action: 'clickCenter',
+          activityIds: [
+            'com.ants360.yicamera.activity.SplashActivityChina',
+            'com.ants360.yicamera.fragment.AdDialogFragment',
+          ],
+          matches: '[text="广告"][visibleToUser=true]',
+        },
+        {
+          key: 7,
+          fastQuery: true,
+          activityIds: [
+            'com.ants360.yicamera.activity.SplashActivityChina',
+            'com.ants360.yicamera.fragment.AdDialogFragment',
+          ],
+          position: {
+            left: 'width * 0.09',
+            top: 'height * 0.94',
+          },
+          matches: [
+            '[text*="上滑或点击查看"][visibleToUser=true]',
+            '[text*="第三方应用" || text*="详情页"][visibleToUser=true]',
+          ],
         },
       ],
     },

@@ -28,6 +28,27 @@ export default defineGkdApp({
       ],
     },
     {
+      key: 1,
+      name: '全屏广告-应用外跳转',
+      desc: '从其它应用广告跳转到应用详情页时自动返回',
+      enable: true,
+      matchRoot: true,
+      actionMaximum: 1,
+      matchTime: 10000,
+      resetMatch: 'app',
+      priorityTime: 10000,
+      rules: [
+        {
+          key: 0,
+          fastQuery: true,
+          action: 'back',
+          activityIds: 'com.xiaomi.market.ui.detail.AppDetailActivityInner',
+          matches:
+            '[vid="top_bar_back_layout"][clickable=true][visibleToUser=true]',
+        },
+      ],
+    },
+    {
       key: 9,
       name: '局部广告-卡片广告',
       rules: [
