@@ -325,9 +325,10 @@ export default defineGkdApp({
             top: 'height * 0.94',
           },
           matches: [
-            '[text*="上滑或点击查看"][visibleToUser=true]',
+            '[text*="上滑或点击查看" || text="向上滑动"][visibleToUser=true]',
             '[text*="第三方应用" || text*="详情页"][visibleToUser=true]',
           ],
+          snapshotUrls: 'https://i.gkd.li/i/25901083',
         },
       ],
     },
