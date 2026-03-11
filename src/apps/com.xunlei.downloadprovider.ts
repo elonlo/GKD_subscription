@@ -183,6 +183,25 @@ export default defineGkdApp({
             '@ImageView[clickable=true][visibleToUser=true][width<=90 && height<=90][left>=1000][top<=500] +n ImageView[clickable=true][visibleToUser=true][width>=1000 && height>=1500] +n RelativeLayout[clickable=true][visibleToUser=true][width>=1000 && height>=200]',
           snapshotUrls: 'https://i.gkd.li/i/25901678',
         },
+        {
+          key: 8,
+          fastQuery: true,
+          activityIds: 'com.beizi.ad.v2.activity.BeiZiNewInterstitialActivity',
+          matches:
+            '[vid="beizi_interstitial_ad_close_container_rl"][clickable=true]',
+          snapshotUrls: 'https://i.gkd.li/i/25902441',
+        },
+        {
+          key: 9,
+          fastQuery: true,
+          activityIds: 'com.xunlei.upgrade.XUpgradeActivity',
+          matches: [
+            '[text*="广告"][visibleToUser=true]',
+            '[text="查看详情"][visibleToUser=true]',
+            '[text="关闭"][clickable=true][visibleToUser=true][left>=900][top<=1000]',
+          ],
+          snapshotUrls: 'https://i.gkd.li/i/25902447',
+        },
       ],
     },
     {
