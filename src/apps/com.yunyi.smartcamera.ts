@@ -53,7 +53,10 @@ export default defineGkdApp({
             'com.bytedance.sdk.openadsdk.stub.activity.Stub_Standard_Portrait_Activity',
           matches:
             '@ImageView[visibleToUser=true][width<=80 && height<=80][left>=1000][top>=2450] <n [text*="跳转至详情页或第三方应用"][visibleToUser=true]',
-          snapshotUrls: 'https://i.gkd.li/i/25890744',
+          snapshotUrls: [
+            'https://i.gkd.li/i/25890744',
+            'https://i.gkd.li/i/25891575',
+          ],
         },
         {
           key: 5,
