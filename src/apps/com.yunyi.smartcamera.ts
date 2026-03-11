@@ -48,6 +48,16 @@ export default defineGkdApp({
         {
           key: 4,
           fastQuery: true,
+          action: 'clickCenter',
+          activityIds:
+            'com.bytedance.sdk.openadsdk.stub.activity.Stub_Standard_Portrait_Activity',
+          matches:
+            '@ImageView[visibleToUser=true][width<=80 && height<=80][left>=1000][top>=2450] <n [text*="跳转至详情页或第三方应用"][visibleToUser=true]',
+          snapshotUrls: 'https://i.gkd.li/i/25890744',
+        },
+        {
+          key: 5,
+          fastQuery: true,
           matches: [
             '[text*="广告"][visibleToUser=true]',
             '[text="关闭"][visibleToUser=true]',
@@ -55,20 +65,20 @@ export default defineGkdApp({
           snapshotUrls: 'https://i.gkd.li/i/24989298',
         },
         {
-          key: 5,
+          key: 6,
           fastQuery: true,
           matches:
             '@ImageView[childCount=0][text=null][desc=null][id=null][visibleToUser=true][width<90 && height<90] < FrameLayout[childCount=1][text=null][desc=null][id=null][parent.childCount>3] <n FrameLayout >(2,3) [text^="立即" || text$="详情" || text^="了解" || text="去微信看看" || text$="应用" || text="进入小程序" || text="领取优惠" || text="跳转微信"]',
           snapshotUrls: 'https://i.gkd.li/i/24989256',
         },
         {
-          key: 6,
+          key: 7,
           fastQuery: true,
           matches: '[vid="iv_ad_logo"] - [vid="iv_close"][clickable=true]',
           snapshotUrls: 'https://i.gkd.li/i/25016571',
         },
         {
-          key: 7,
+          key: 8,
           fastQuery: true,
           action: 'back',
           activityIds:
@@ -76,7 +86,7 @@ export default defineGkdApp({
           matches: '[text="反馈"][visibleToUser=true]',
         },
         {
-          key: 8,
+          key: 9,
           fastQuery: true,
           activityIds: [
             'com.ants360.yicamera.activity.MainActivity',
@@ -86,7 +96,7 @@ export default defineGkdApp({
             '@[clickable=true][visibleToUser=true][width<=60 && height<=60] <<n [vid="adContainer"]',
         },
         {
-          key: 9,
+          key: 10,
           fastQuery: true,
           activityIds: [
             'com.ants360.yicamera.activity.MainActivity',
@@ -95,14 +105,14 @@ export default defineGkdApp({
           matches: '[vid="btnAntsDialogLeft"][text="仔细思考"][clickable=true]',
         },
         {
-          key: 10,
+          key: 11,
           fastQuery: true,
           activityIds: 'com.ants360.yicamera.activity.MainActivity',
           matches:
             '@ImageView[clickable=true][visibleToUser=true][width<=60 && height<=60][left>=1000] <<n [vid="native_ad_container" || vid="ad_container"]',
         },
         {
-          key: 11,
+          key: 12,
           fastQuery: true,
           activityIds: [
             'com.ants360.yicamera.activity.MainActivity',
