@@ -32,15 +32,14 @@
 - If the user provides only screenshots, treat them as symptom evidence, not enough for precise selectors.
 - Prefer `action: 'clickCenter'` when snapshots show no `clickable=true` nodes but the visual close target is clear.
 - Keep app group `key` values sorted in ascending order.
-- If the user says they uploaded new GKD snapshots to the repository, first sync the latest remote branch, then inspect the new files under `snapshots/`, and only after that start selector analysis and rule edits.
+- Preferred collaboration input is a GKD share link like `https://i.gkd.li/i/<id>`.
+- When the user provides a GKD share link, first resolve it to the underlying downloadable resource, then inspect the snapshot contents, then start selector analysis and rule edits.
 
 ## Current Project-Specific Decisions
 
 - Cloudflare Pages is used as a static deployment target for `dist/`.
 - Current Pages project name and public URL are configured outside the repository via GitHub Variables / Cloudflare.
 - `tmp/` is for local snapshots and should stay ignored.
-- `snapshots/` is the shared upload directory for user-provided GKD snapshot zips that should be committed to Git.
-- Pushes that only touch `snapshots/**` should not trigger `check_fix_push` or `deploy_cloudflare_pages`.
 - For Xiaomi devices, ad landing pages may jump into `com.miui.hybrid` (`快应用服务框架`) via `com.miui.hybrid.VendorLauncherActivity$Launcher1`.
 - The current mitigation strategy for that path is two-stage:
   1. keep the source app rule that closes the ad on its own splash/activity
@@ -74,7 +73,6 @@
 
 - Preferred branch: `main`
 - Preferred push target: `origin main`
-- When the user notifies that new snapshot files were uploaded to Git, pull or rebase onto the latest `origin/main` before doing any local analysis.
 - Before push, expect repo hooks to run `pnpm run check`
 - If commit is needed and local git identity is missing, configure repository-local identity instead of global identity.
 
@@ -126,15 +124,16 @@
 ## Yunyi Future Workflow
 
 - For new `云蚁物联` samples, keep preferring SDK/node-level selectors over pure coordinates when available.
-- When the user uploads new `云蚁物联` snapshots into `snapshots/`, default execution order is:
-  1. sync latest `origin/main`
-  2. inspect newly uploaded snapshot zips in `snapshots/`
-  3. analyze nodes and identify stable anchors
-  4. patch source rules
-  5. run `pnpm run check`
-  6. run `pnpm run build`
-  7. push to `main`
-  8. confirm Cloudflare Pages deployment result
+- The only collaboration flow for new `云蚁物联` samples is:
+  1. user sends a GKD share link
+  2. resolve the link to the underlying zip resource
+  3. download and inspect the snapshot contents
+  4. analyze nodes and identify stable anchors
+  5. patch source rules
+  6. run `pnpm run check`
+  7. run `pnpm run build`
+  8. push to `main`
+  9. confirm Cloudflare Pages deployment result
 - If a new branch appears, inspect for these stable anchors first:
   - `skip_button`
   - `ptgSkipLayout`
