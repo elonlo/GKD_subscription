@@ -296,6 +296,12 @@ export default defineGkdApp({
             '[text="立即进入"][visibleToUser=true]',
             '[text*="落地页" || text*="三方APP"][visibleToUser=true]',
           ],
+          snapshotUrls: [
+            'https://i.gkd.li/i/25891575',
+            'https://i.gkd.li/i/25894012',
+            'https://i.gkd.li/i/25900544',
+            'https://i.gkd.li/i/25900551',
+          ],
         },
         {
           key: 6,
