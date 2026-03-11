@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - '**'
+    paths-ignore:
+      - 'snapshots/**'
 
 permissions: write-all
 
