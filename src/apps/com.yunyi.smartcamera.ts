@@ -349,6 +349,7 @@ export default defineGkdApp({
             'https://i.gkd.li/i/25909557',
             'https://i.gkd.li/i/25922229',
             'https://i.gkd.li/i/25923745',
+            'https://i.gkd.li/i/25925966',
           ],
         },
         {
@@ -375,6 +376,7 @@ export default defineGkdApp({
             'https://i.gkd.li/i/25909557',
             'https://i.gkd.li/i/25922229',
             'https://i.gkd.li/i/25922433',
+            'https://i.gkd.li/i/25925966',
           ],
         },
         {
@@ -397,6 +399,7 @@ export default defineGkdApp({
             'https://i.gkd.li/i/25909557',
             'https://i.gkd.li/i/25922229',
             'https://i.gkd.li/i/25922433',
+            'https://i.gkd.li/i/25925966',
           ],
           snapshotUrls: [
             'https://i.gkd.li/i/25891575',
@@ -436,6 +439,7 @@ export default defineGkdApp({
             'https://i.gkd.li/i/25922229',
             'https://i.gkd.li/i/25922433',
             'https://i.gkd.li/i/25923745',
+            'https://i.gkd.li/i/25925966',
           ],
         },
       ],
