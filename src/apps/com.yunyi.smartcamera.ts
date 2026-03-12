@@ -153,8 +153,11 @@ export default defineGkdApp({
           action: 'clickCenter',
           activityIds: 'com.baidu.mobads.sdk.api.MobRewardVideoActivity',
           matches:
-            '@ImageView[clickable=true][visibleToUser=true][width<=80 && height<=80][left>=980][top<=950] <<n [text="反馈"][visibleToUser=true]',
-          snapshotUrls: 'https://i.gkd.li/i/25923729',
+            '@ImageView[clickable=true][visibleToUser=true][width<=80 && height<=80][left>=980][top<=950]',
+          snapshotUrls: [
+            'https://i.gkd.li/i/25923729',
+            'https://i.gkd.li/i/25924385',
+          ],
         },
       ],
     },
