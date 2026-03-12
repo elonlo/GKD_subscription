@@ -91,13 +91,26 @@ export default defineGkdApp({
           snapshotUrls: 'https://i.gkd.li/i/25922579',
         },
         {
+          key: 19,
+          fastQuery: true,
+          action: 'clickCenter',
+          activityIds:
+            'com.bytedance.sdk.openadsdk.stub.activity.Stub_Standard_Portrait_Activity',
+          matches:
+            '@View[visibleToUser=true][childCount=1][left>=1100][top>=1000][width<=80 && height<=80] > View[visibleToUser=true][childCount=1] > Image[visibleToUser=true][childCount=0][text=""][width<60 && height<60] <n [text="跳转至详情页或第三方应用"][visibleToUser=true]',
+          snapshotUrls: 'https://i.gkd.li/i/25924020',
+        },
+        {
           key: 8,
           fastQuery: true,
           action: 'back',
           activityIds:
             'com.bytedance.sdk.openadsdk.stub.activity.Stub_Standard_Portrait_Activity',
           matches: '[text="反馈"][visibleToUser=true]',
-          excludeSnapshotUrls: 'https://i.gkd.li/i/25922579',
+          excludeSnapshotUrls: [
+            'https://i.gkd.li/i/25922579',
+            'https://i.gkd.li/i/25924020',
+          ],
         },
         {
           key: 9,
