@@ -134,6 +134,15 @@ export default defineGkdApp({
           ],
           matches: '@[clickable=true] > [text="不感兴趣"][visibleToUser=true]',
         },
+        {
+          key: 13,
+          fastQuery: true,
+          action: 'clickCenter',
+          activityIds: 'com.baidu.mobads.sdk.api.MobRewardVideoActivity',
+          matches:
+            '@ImageView[clickable=true][visibleToUser=true][width<=80 && height<=80][left>=980][top<=950] <<n [text="反馈"][visibleToUser=true]',
+          snapshotUrls: 'https://i.gkd.li/i/25923729',
+        },
       ],
     },
     {
@@ -290,11 +299,12 @@ export default defineGkdApp({
             'com.ants360.yicamera.fragment.AdDialogFragment',
           ],
           matches:
-            '@ImageView[visibleToUser=true][width<=60 && height<=60][left>=1100][top<=250] <n [text="立即进入" || text*="落地页" || text*="三方APP"][visibleToUser=true]',
+            '@ImageView[visibleToUser=true][width<=80 && height<=80][left>=1080][top<=250] <n [text="立即进入" || text*="落地页" || text*="三方APP" || text*="摇一摇跳转至" || text*="第三方应用或详情页"][visibleToUser=true]',
           snapshotUrls: [
             'https://i.gkd.li/i/25901083',
             'https://i.gkd.li/i/25909557',
             'https://i.gkd.li/i/25922229',
+            'https://i.gkd.li/i/25923745',
           ],
         },
         {
@@ -381,6 +391,7 @@ export default defineGkdApp({
             'https://i.gkd.li/i/25909557',
             'https://i.gkd.li/i/25922229',
             'https://i.gkd.li/i/25922433',
+            'https://i.gkd.li/i/25923745',
           ],
         },
       ],
