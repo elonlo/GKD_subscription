@@ -170,6 +170,14 @@ export default defineGkdApp({
             'https://i.gkd.li/i/25924385',
           ],
         },
+        {
+          key: 14,
+          fastQuery: true,
+          activityIds: 'com.ants360.yicamera.activity.MainActivity',
+          matches:
+            '[vid="ptgSkipLayout"][clickable=true] <<n [vid="gdt_splash_rl"]',
+          snapshotUrls: 'https://i.gkd.li/i/25924894',
+        },
       ],
     },
     {
@@ -198,6 +206,15 @@ export default defineGkdApp({
             'com.xiaoyi.yiplayer.ui.PlayerActivity',
           ],
           matches: '[vid="tvShow"][text="收起"][clickable=true]',
+        },
+        {
+          key: 2,
+          fastQuery: true,
+          action: 'clickCenter',
+          activityIds: 'com.ants360.yicamera.activity.MainActivity',
+          matches:
+            '[text*="广告"][visibleToUser=true] <<n [vid="native_ad_container"] >n @View[visibleToUser=true][width<=90 && height<=90][left>=1000] > Image[visibleToUser=true][width<=50 && height<=50]',
+          snapshotUrls: 'https://i.gkd.li/i/25924900',
         },
       ],
     },
