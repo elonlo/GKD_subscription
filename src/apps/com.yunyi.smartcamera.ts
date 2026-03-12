@@ -279,11 +279,21 @@ export default defineGkdApp({
             'com.ants360.yicamera.fragment.AdDialogFragment',
           ],
           matches:
-            '@View[clickable=true][childCount=0][visibleToUser=true][left<=200][top>=2300][width<=160 && height<=160] <n FrameLayout[childCount>=4][visibleToUser=true] >(n+6) [text*="详情页" || text*="第三方应用" || text*="落地页" || text*="三方APP"][visibleToUser=true]',
+            '@ImageView[visibleToUser=true][width<=60 && height<=60][left>=1100][top<=250] <n [text="立即进入" || text*="落地页" || text*="三方APP"][visibleToUser=true]',
           snapshotUrls: [
+            'https://i.gkd.li/i/25901083',
             'https://i.gkd.li/i/25909557',
             'https://i.gkd.li/i/25922229',
           ],
+        },
+        {
+          key: 17,
+          fastQuery: true,
+          action: 'clickCenter',
+          activityIds: 'com.ptg.ptgapi.activity.PtgInteractionPortraitActivity',
+          matches:
+            '[vid="closeAdvertLayout"][clickable=true][visibleToUser=true] > [desc="Close"][visibleToUser=true]',
+          snapshotUrls: 'https://i.gkd.li/i/25922433',
         },
         {
           key: 4,
@@ -295,6 +305,12 @@ export default defineGkdApp({
             'com.ants360.yicamera.fragment.AdDialogFragment',
           ],
           matches: '[text="立即进入"][visibleToUser=true]',
+          excludeSnapshotUrls: [
+            'https://i.gkd.li/i/25901083',
+            'https://i.gkd.li/i/25909557',
+            'https://i.gkd.li/i/25922229',
+            'https://i.gkd.li/i/25922433',
+          ],
         },
         {
           key: 5,
@@ -311,7 +327,12 @@ export default defineGkdApp({
             '[text="立即进入"][visibleToUser=true]',
             '[text*="落地页" || text*="三方APP"][visibleToUser=true]',
           ],
-          excludeSnapshotUrls: 'https://i.gkd.li/i/25909557',
+          excludeSnapshotUrls: [
+            'https://i.gkd.li/i/25901083',
+            'https://i.gkd.li/i/25909557',
+            'https://i.gkd.li/i/25922229',
+            'https://i.gkd.li/i/25922433',
+          ],
           snapshotUrls: [
             'https://i.gkd.li/i/25891575',
             'https://i.gkd.li/i/25894012',
@@ -344,9 +365,11 @@ export default defineGkdApp({
             '[text*="上滑或点击查看" || text="向上滑动"][visibleToUser=true]',
             '[text*="第三方应用" || text*="详情页"][visibleToUser=true]',
           ],
-          snapshotUrls: [
+          excludeSnapshotUrls: [
             'https://i.gkd.li/i/25901083',
             'https://i.gkd.li/i/25909557',
+            'https://i.gkd.li/i/25922229',
+            'https://i.gkd.li/i/25922433',
           ],
         },
       ],
