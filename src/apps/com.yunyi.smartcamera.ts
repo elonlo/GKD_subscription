@@ -279,8 +279,11 @@ export default defineGkdApp({
             'com.ants360.yicamera.fragment.AdDialogFragment',
           ],
           matches:
-            '@View[clickable=true][childCount=0][visibleToUser=true][left<=200][top>=2300][width<=160 && height<=160] <n FrameLayout[childCount>=4][visibleToUser=true] >(n+6) [text*="详情页" || text*="第三方应用"][visibleToUser=true]',
-          snapshotUrls: 'https://i.gkd.li/i/25909557',
+            '@View[clickable=true][childCount=0][visibleToUser=true][left<=200][top>=2300][width<=160 && height<=160] <n FrameLayout[childCount>=4][visibleToUser=true] >(n+6) [text*="详情页" || text*="第三方应用" || text*="落地页" || text*="三方APP"][visibleToUser=true]',
+          snapshotUrls: [
+            'https://i.gkd.li/i/25909557',
+            'https://i.gkd.li/i/25922229',
+          ],
         },
         {
           key: 4,
