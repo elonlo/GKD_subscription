@@ -81,12 +81,23 @@ export default defineGkdApp({
           snapshotUrls: 'https://i.gkd.li/i/25016571',
         },
         {
+          key: 18,
+          fastQuery: true,
+          action: 'clickCenter',
+          activityIds:
+            'com.bytedance.sdk.openadsdk.stub.activity.Stub_Standard_Portrait_Activity',
+          matches:
+            '[text="反馈"][visibleToUser=true] -2 @View[visibleToUser=true][childCount=1][left>=1100][top>=1000] > Image[visibleToUser=true][childCount=0][text=""][width<60 && height<60]',
+          snapshotUrls: 'https://i.gkd.li/i/25922579',
+        },
+        {
           key: 8,
           fastQuery: true,
           action: 'back',
           activityIds:
             'com.bytedance.sdk.openadsdk.stub.activity.Stub_Standard_Portrait_Activity',
           matches: '[text="反馈"][visibleToUser=true]',
+          excludeSnapshotUrls: 'https://i.gkd.li/i/25922579',
         },
         {
           key: 9,
