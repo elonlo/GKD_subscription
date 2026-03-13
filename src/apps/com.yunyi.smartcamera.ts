@@ -362,6 +362,18 @@ export default defineGkdApp({
           snapshotUrls: 'https://i.gkd.li/i/25922433',
         },
         {
+          key: 18,
+          fastQuery: true,
+          action: 'clickCenter',
+          activityIds: [
+            'com.ants360.yicamera.activity.SplashActivityChina',
+            'com.ants360.yicamera.fragment.AdDialogFragment',
+          ],
+          matches:
+            '[text="反馈"][visibleToUser=true] < View[visibleToUser=true] > @View[visibleToUser=true][childCount=1][left>=1080][top<=260][width<=90 && height<=90] > View[visibleToUser=true][childCount=1] > Image[visibleToUser=true][childCount=0][text=""][width<=70 && height<=70]',
+          snapshotUrls: 'https://i.gkd.li/i/25957980',
+        },
+        {
           key: 4,
           fastQuery: true,
           action: 'clickCenter',
