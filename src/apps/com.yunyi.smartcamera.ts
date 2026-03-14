@@ -178,6 +178,37 @@ export default defineGkdApp({
             '[vid="ptgSkipLayout"][clickable=true] <<n [vid="gdt_splash_rl"]',
           snapshotUrls: 'https://i.gkd.li/i/25924894',
         },
+        {
+          key: 21,
+          fastQuery: true,
+          action: 'clickCenter',
+          activityIds:
+            'com.bytedance.sdk.openadsdk.core.component.reward.activity.TTFullScreenVideoActivity',
+          matches:
+            '[text="反馈"][visibleToUser=true] <n @View[visibleToUser=true][childCount=1][left>=1080][top<=260][width<=90 && height<=90] > View[visibleToUser=true][childCount=1] > Image[visibleToUser=true][childCount=0][text=""][width<=70 && height<=70]',
+          snapshotUrls: 'https://i.gkd.li/i/25961831',
+        },
+        {
+          key: 22,
+          fastQuery: true,
+          action: 'clickCenter',
+          activityIds:
+            'com.bytedance.sdk.openadsdk.stub.activity.Stub_Standard_Portrait_Activity',
+          matches:
+            '[text="反馈"][visibleToUser=true] < View[visibleToUser=true][childCount=2] > @View[visibleToUser=true][childCount=1][left>=1100][top>=1000][width<=80 && height<=80] > View[visibleToUser=true][childCount=1] > Image[visibleToUser=true][childCount=0][text=""][width<=60 && height<=60]',
+          snapshotUrls: [
+            'https://i.gkd.li/i/25961817',
+            'https://i.gkd.li/i/25961834',
+          ],
+        },
+        {
+          key: 23,
+          fastQuery: true,
+          activityIds: 'com.ants360.yicamera.activity.MainActivity',
+          matches:
+            '[vid="xml_interstitial_tv_close_cd"][text="关闭"][clickable=true][visibleToUser=true] <<n [vid="sa_alliance_container_view"]',
+          snapshotUrls: 'https://i.gkd.li/i/25961880',
+        },
       ],
     },
     {
@@ -372,6 +403,14 @@ export default defineGkdApp({
           matches:
             '[text="反馈"][visibleToUser=true] < View[visibleToUser=true] > @View[visibleToUser=true][childCount=1][left>=1080][top<=260][width<=90 && height<=90] > View[visibleToUser=true][childCount=1] > Image[visibleToUser=true][childCount=0][text=""][width<=70 && height<=70]',
           snapshotUrls: 'https://i.gkd.li/i/25957980',
+        },
+        {
+          key: 19,
+          fastQuery: true,
+          activityIds: 'com.ants360.yicamera.activity.SplashActivityChina',
+          matches:
+            '[vid="yd_saas_interstitial_close_layout"][visibleToUser=true] > [vid="iv_close" || vid="v_close"][clickable=true][visibleToUser=true]',
+          snapshotUrls: 'https://i.gkd.li/i/25961852',
         },
         {
           key: 4,
