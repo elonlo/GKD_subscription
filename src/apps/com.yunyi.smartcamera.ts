@@ -230,6 +230,13 @@ export default defineGkdApp({
           ],
           snapshotUrls: 'https://i.gkd.li/i/25994091',
         },
+        {
+          key: 26,
+          fastQuery: true,
+          activityIds: 'com.ants360.yicamera.activity.MainActivity',
+          matches: '[vid="ptgSkipLayout"][clickable=true][visibleToUser=true]',
+          snapshotUrls: 'https://i.gkd.li/i/25996021',
+        },
       ],
     },
     {
