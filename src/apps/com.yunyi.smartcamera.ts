@@ -209,6 +209,16 @@ export default defineGkdApp({
             '[vid="xml_interstitial_tv_close_cd"][text="关闭"][clickable=true][visibleToUser=true] <<n [vid="sa_alliance_container_view"]',
           snapshotUrls: 'https://i.gkd.li/i/25961880',
         },
+        {
+          key: 24,
+          fastQuery: true,
+          action: 'clickCenter',
+          activityIds:
+            'com.bytedance.sdk.openadsdk.core.component.reward.activity.TTFullScreenVideoActivity',
+          matches:
+            '[text="反馈"][visibleToUser=true] < View[visibleToUser=true][childCount=2] > @View[visibleToUser=true][childCount=1][left>=1100][top>=1000][width<=90 && height<=90] > View[visibleToUser=true][childCount=1] > Image[visibleToUser=true][childCount=0][text=""][width<=60 && height<=60]',
+          snapshotUrls: 'https://i.gkd.li/i/25989102',
+        },
       ],
     },
     {
