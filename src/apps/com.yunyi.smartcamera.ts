@@ -219,6 +219,17 @@ export default defineGkdApp({
             '[text="反馈"][visibleToUser=true] < View[visibleToUser=true][childCount=2] > @View[visibleToUser=true][childCount=1][left>=1100][top>=1000][width<=90 && height<=90] > View[visibleToUser=true][childCount=1] > Image[visibleToUser=true][childCount=0][text=""][width<=60 && height<=60]',
           snapshotUrls: 'https://i.gkd.li/i/25989102',
         },
+        {
+          key: 25,
+          fastQuery: true,
+          activityIds:
+            'com.bytedance.sdk.openadsdk.stub.activity.Stub_Standard_Portrait_Activity',
+          matches: [
+            '[text="是否自动跳转到快应用？"][visibleToUser=true]',
+            '[text="取消"][clickable=true][visibleToUser=true]',
+          ],
+          snapshotUrls: 'https://i.gkd.li/i/25994091',
+        },
       ],
     },
     {
